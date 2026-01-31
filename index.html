@@ -1,54 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Saylani Welfare Clone</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Signup Page</title>
+
+<style>
+*{
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    margin: 0;
+    background: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container{
+    width: 100%;
+    max-width: 420px;
+    padding: 15px;
+}
+
+.logo{
+    text-align: center;
+    color: #1877f2;
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.card{
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+}
+
+.card h2{
+    text-align: center;
+    margin: 0;
+}
+
+.card p{
+    text-align: center;
+    color: #606770;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.row{
+    display: flex;
+    gap: 10px;
+}
+
+input, select{
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #ccd0d5;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.label{
+    font-size: 12px;
+    color: #606770;
+    margin-bottom: 5px;
+}
+
+.gender{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.gender div{
+    flex: 1;
+    border: 1px solid #ccd0d5;
+    padding: 10px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+}
+
+.text{
+    font-size: 11px;
+    color: #777;
+    margin: 10px 0;
+}
+
+button{
+    width: 100%;
+    background: #42b72a;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.login-link{
+    text-align: center;
+    margin-top: 15px;
+}
+
+.login-link a{
+    color: #1877f2;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 480px){
+    .logo{
+        font-size: 38px;
+    }
+    .row{
+        flex-direction: column;
+    }
+}
+</style>
 </head>
+
 <body>
 
-<!-- Top Bar -->
-<div class="top-bar">
-    <p>Donate Us | Be a Sponsor</p>
+<div class="container">
+    <div class="logo">facebook</div>
+
+    <div class="card">
+        <h2>Create a new account</h2>
+        <p>It's quick and easy.</p>
+
+        <div class="row">
+            <input type="text" placeholder="First name">
+            <input type="text" placeholder="Surname">
+        </div>
+
+        <div class="label">Date of birth</div>
+        <div class="row">
+            <select>
+                <option>30</option>
+            </select>
+            <select>
+                <option>Jan</option>
+            </select>
+            <select>
+                <option>2026</option>
+            </select>
+        </div>
+
+        <div class="label">Gender</div>
+        <div class="gender">
+            <div>Female <input type="radio"></div>
+            <div>Male <input type="radio"></div>
+            <div>Custom <input type="radio"></div>
+        </div>
+
+        <input type="text" placeholder="Mobile number or email address">
+        <input type="password" placeholder="New password">
+
+        <div class="text">
+            By clicking Sign Up, you agree to our Terms, Privacy Policy and Cookies Policy.
+        </div>
+
+        <button>Sign Up</button>
+
+        <div class="login-link">
+            <a href="#">Already have an account?</a>
+        </div>
+    </div>
 </div>
-
-<!-- Navbar -->
-<nav class="navbar">
-    <img src="https://saylaniwelfare.com/static/media/logo.22bf709605809177256c.png" alt="Logo">
-    <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Media</a></li>
-        <li><a href="#">Contact</a></li>
-    </ul>
-</nav>
-
-<!-- Hero Section -->
-<section class="hero">
-    <div class="hero-text">
-        <h1>Welcome to Saylani Welfare</h1>
-        <p>Serving humanity with education, food & healthcare</p>
-        <button>Donate Now</button>
-    </div>
-    <img src="https://saylaniwelfare.com/static/media/slider2.1f0c13d8e4d1db68c9ef.png" alt="Hero">
-</section>
-
-<!-- Services -->
-<section class="services">
-    <h2>What We Are Doing</h2>
-    <div class="cards">
-        <div class="card">Food Distribution</div>
-        <div class="card">Education</div>
-        <div class="card">Medical</div>
-        <div class="card">Welfare</div>
-    </div>
-</section>
-
-<!-- Footer -->
-<footer>
-    <p>© 2026 Saylani Welfare Clone | Practice Project</p>
-</footer>
 
 </body>
 </html>
